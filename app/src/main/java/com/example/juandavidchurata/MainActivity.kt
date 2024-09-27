@@ -51,51 +51,53 @@ class MainActivity : ComponentActivity() {
 fun PersonalCard(modifier: Modifier = Modifier) {
     Column(
         modifier = modifier
-            .fillMaxSize()
+            .fillMaxSize() // Asegura que la columna ocupe toda la pantalla
             .padding(16.dp),
-        horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.Center
+        horizontalAlignment = Alignment.CenterHorizontally, // Centrar horizontalmente
+        verticalArrangement = Arrangement.Center // Centrar verticalmente
     ) {
 
         Image(
-            painter = painterResource(id = R.drawable.ic_launcher_foreground),
+            painter = painterResource(id = R.drawable.ic_launcher_foreground), // Usa tu imagen aquí
             contentDescription = "Profile Image",
             modifier = Modifier
-                .size(100.dp)
+                .size(100.dp) // Tamaño de la imagen
                 .aspectRatio(1f)
                 .clip(CircleShape),
             contentScale = ContentScale.Crop
         )
 
-
         Spacer(modifier = Modifier.height(16.dp))
 
-        // Nombre completo
+        // Nombre completo centrado
         Text(
             text = "Juan David Camilo Churata Mamani",
             fontSize = 24.sp,
-            fontWeight = FontWeight.Bold
+            fontWeight = FontWeight.Bold,
+            modifier = Modifier.align(Alignment.CenterHorizontally) // Se asegura de que el texto esté centrado
         )
 
-        // Título
+        // Título también centrado
         Text(
-            text = "Title",
+            text = "Especialista",
             fontSize = 18.sp,
-            color = Color.Gray
+            color = Color.Gray,
+            modifier = Modifier.align(Alignment.CenterHorizontally) // Centra el título horizontalmente
         )
 
         Spacer(modifier = Modifier.height(32.dp))
 
         // Número de teléfono
-        InfoItem(icon = R.drawable.ic_phone, text = "+00 (00) 000 000")
+        InfoItem(icon = R.drawable.ic_phone, text = "+56 9 4350 2121")
 
         // Handle de redes sociales
-        InfoItem(icon = R.drawable.ic_social, text = "@socialmediahandle")
+        InfoItem(icon = R.drawable.ic_social, text = "@Juajo12")
 
         // Correo electrónico
-        InfoItem(icon = R.drawable.ic_email, text = "email@domain.com")
+        InfoItem(icon = R.drawable.ic_email, text = "ajenjo2550@gmail.com")
     }
 }
+
 
 @Composable
 fun InfoItem(icon: Int, text: String) {
