@@ -56,9 +56,9 @@ fun PersonalCard(modifier: Modifier = Modifier) {
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
     ) {
-        // Imagen del perfil (puedes cambiar el recurso de la imagen)
+
         Image(
-            painter = painterResource(id = R.drawable.ic_launcher_foreground), // Usa tu imagen aquí
+            painter = painterResource(id = R.drawable.ic_launcher_foreground),
             contentDescription = "Profile Image",
             modifier = Modifier
                 .size(100.dp)
@@ -67,11 +67,12 @@ fun PersonalCard(modifier: Modifier = Modifier) {
             contentScale = ContentScale.Crop
         )
 
+
         Spacer(modifier = Modifier.height(16.dp))
 
         // Nombre completo
         Text(
-            text = "Full Name",
+            text = "Juan David Camilo Churata Mamani",
             fontSize = 24.sp,
             fontWeight = FontWeight.Bold
         )
